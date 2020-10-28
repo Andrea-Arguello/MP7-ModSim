@@ -13129,7 +13129,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Ejercicio-1:-Variables-antit&#233;ticas,-$\lambda-=-1$">Ejercicio 1: <em>Variables antit&#233;ticas</em>, $\lambda = 1$<a class="anchor-link" href="#Ejercicio-1:-Variables-antit&#233;ticas,-$\lambda-=-1$">&#182;</a></h3><p>Calcular el valor esperado de una variable aleatoria exponencial con $\lambda =1$, utilizando el uso de variables anititéticas.</p>
+<h3 id="Ejercicio-1:-Variables-antit&#233;ticas,-$\lambda-=-1$">Ejercicio 1: <em>Variables antit&#233;ticas</em>, $\lambda = 1$<a class="anchor-link" href="#Ejercicio-1:-Variables-antit&#233;ticas,-$\lambda-=-1$">&#182;</a></h3><p>Calcular el valor esperado de una variable aleatoria exponencial con $\lambda =1$, utilizando el método de variables anititéticas.</p>
 
 </div>
 </div>
@@ -13394,7 +13394,8 @@ $Var(Y)$ obtenida: 0.169313, $\sigma^2$ esperada: 1.000000
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Ejercicio-2:-Variables-de-control,-$\lambda-=-1$">Ejercicio 2: <em>Variables de control</em>, $\lambda = 1$<a class="anchor-link" href="#Ejercicio-2:-Variables-de-control,-$\lambda-=-1$">&#182;</a></h3>
+<h3 id="Ejercicio-2:-Variables-de-control,-$\lambda-=-1$">Ejercicio 2: <em>Variables de control</em>, $\lambda = 1$<a class="anchor-link" href="#Ejercicio-2:-Variables-de-control,-$\lambda-=-1$">&#182;</a></h3><p>Calcular el valor esperado de una variable aleatoria exponencial con $\lambda =1$, utilizando el método de variables de control.</p>
+
 </div>
 </div>
 </div>
@@ -13557,7 +13558,8 @@ $Var(X)$ obtenida: 0.984136, $\sigma^2$ esperada: 1.000000
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Ejercicio-3:-M&#233;todo-estratificado,-$\lambda-=-1$">Ejercicio 3: M&#233;todo estratificado, $\lambda = 1$<a class="anchor-link" href="#Ejercicio-3:-M&#233;todo-estratificado,-$\lambda-=-1$">&#182;</a></h2>
+<h2 id="Ejercicio-3:-M&#233;todo-estratificado,-$\lambda-=-1$">Ejercicio 3: M&#233;todo estratificado, $\lambda = 1$<a class="anchor-link" href="#Ejercicio-3:-M&#233;todo-estratificado,-$\lambda-=-1$">&#182;</a></h2><p>Calcular el valor esperado de una variable aleatoria exponencial con $\lambda = 1$, utilizando el método estratificado. Se escogen tres estratos (intervalos): $[0,1)$, $[1,3)$ y $[3,\infty)$.</p>
+
 </div>
 </div>
 </div>
@@ -13567,14 +13569,14 @@ $Var(X)$ obtenida: 0.984136, $\sigma^2$ esperada: 1.000000
 <p><em>El problema fue parcialmente resuelto utilizando el método de estratificación descrito en: <a href="https://jjtejada.files.wordpress.com/2014/01/stratified_sampling.pdf">https://jjtejada.files.wordpress.com/2014/01/stratified_sampling.pdf</a></em></p>
 <p><strong>Probabilidades de obtener una observación en cada uno de los estratos</strong></p>
 <p>Ya que se utiliza la distribución continua uniforme estándar ($\mathscr{U} (0,1)$) para generar las variables aleatorias de la distribución, se puede determinar la probabilidad $P \Big(X \in S_k\Big) = p_k$ evaluando las probabilidades de $X\in S_k$ en la distribución:</p>
-<p><em>Para el estrato $S_1$, donde $X\in [0,1]$</em>
+<p><em>Para el estrato $S_1$, donde $X\in [0,1)$</em>
 $$p_1 = P \Big(X \in S_1\Big) = \int_0^1 \lambda e^{-\lambda x} dx = 1 - e^{-1} \approx 0.632120$$</p>
-<p><em>Para el estrato $S_2$, donde $X\in [1,3]$</em>
+<p><em>Para el estrato $S_2$, donde $X\in [1,3)$</em>
 $$p_2 = P \Big(X \in S_2\Big) = \int_1^3 \lambda e^{-\lambda x} dx = -e^{-3} + e^{-1} \approx 0.318092$$</p>
 <p><em>Para el estrato $S_3$, donde $X\in [3,\infty)$</em>
 $$p_3 = P \Big(X \in S_3\Big) = \int_3^\infty \lambda e^{-\lambda x} dx = 0 + e^{-3} \approx 0.049787$$</p>
 <p>De esta manera, cuando se generen los números aleatorios por $\mathscr{U} (0,1)$, se obtiene:</p>
-$$\text{Si } 0 \leq \mathscr{U} (0,1) &lt; 0.632120 \rightarrow X \in [0,1]$$$$\text{Si } 0.632120 \leq \mathscr{U} (0,1) &lt; 0.950213 \rightarrow X \in [1,3]$$$$\text{Si } 0.950213 \leq \mathscr{U} (0,1) \leq 1 \rightarrow X \in [3,\infty)$$<p><strong>Determinación del número de observaciones por cada estrato</strong></p>
+$$\text{Si } 0 \leq \mathscr{U} (0,1) &lt; 0.632120 \rightarrow X \in [0,1)$$$$\text{Si } 0.632120 \leq \mathscr{U} (0,1) &lt; 0.950213 \rightarrow X \in [1,3)$$$$\text{Si } 0.950213 \leq \mathscr{U} (0,1) \leq 1 \rightarrow X \in [3,\infty)$$<p><strong>Determinación del número de observaciones por cada estrato</strong></p>
 <p>Para obtener la reducción de varianza, debe considerarse el número de observaciones por cada uno de los estratos $n_k$, el cual se puede determinar por medio de la siguiente ecuación:</p>
 $$n_k = \Big(\frac{p_k \sigma_k}{\sum _{k=1}^K p_k \sigma_k}\Big)n$$<p>Donde $n$ corresponde al total de observaciones que se utilizarán para la simulación. Ya que se desconoce $\sigma_k$, este se puede estimar por medio de una simulación simple. En este caso, se generarán números aleatorios de $\mathscr{U} (0,1)$ hasta obtener 10000 de cada estrato, y a partir de la varianza de estas muestras, se determinará el número de observaciones que cada estrato deberá tener para la simulación. Para la simulación final, $n = 10,000$.</p>
 
@@ -13753,7 +13755,7 @@ $$\hat{\sigma}^2 = \sum _{k=1}^{K} \frac{p_k^2 S_{k,n_k}^2}{n_k}$$
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">s_1</span> <span class="o">=</span> <span class="p">[]</span>
@@ -13806,7 +13808,7 @@ $$\hat{\sigma}^2 = \sum _{k=1}^{K} \frac{p_k^2 S_{k,n_k}^2}{n_k}$$
 
 
 <div class="output_latex output_subarea ">
-$\epsilon$: 1.0014201656874695; $\epsilon$ esperado: 1.0
+$\epsilon$: 0.9971673783181457; $\epsilon$ esperado: 1.0
 </div>
 
 </div>
@@ -13819,7 +13821,7 @@ $\epsilon$: 1.0014201656874695; $\epsilon$ esperado: 1.0
 
 
 <div class="output_latex output_subarea ">
-$\hat{\sigma}^2$: 3.934325468858224e-06; $\sigma^2$ esperado: 1.0
+$\hat{\sigma}^2$: 3.6082839925111075e-06; $\sigma^2$ esperado: 1.0
 </div>
 
 </div>
